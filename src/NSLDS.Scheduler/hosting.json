@@ -1,0 +1,4 @@
+{
+  "server": "Microsoft.AspNet.Server.Kestrel",
+  "urls": "http://*:5002"
+}

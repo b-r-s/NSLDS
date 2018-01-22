@@ -1,0 +1,25 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Client Upload</title>
+</head>
+<body>
+
+<div>
+    <h4>Client Requests Upload</h4>
+    <hr />
+    <form method="post" asp-action="Upload" asp-controller="api/requests" enctype="multipart/form-data">
+        <p>
+            <input type="file" name="files" multiple="multiple" />
+            <input type="submit" value="Upload" />
+        </p>
+</form>
+    </div>
+</body>
+</html>

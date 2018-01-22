@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>NSLDS API Docs</title>
+</head>
+<body>
+    <h2>NSLDS API requests available</h2>
+    <h3>Initializer</h3>
+    <ul>
+        <li>Update all DBs to latest migration: [GET] api/initializer/migrate</li>
+    </ul>
+    <h3>Federal School Codes</h3>
+    <ul>
+        <li>GetAll: [GET] api/settings/FSCList</li>
+        <li>GetByOpeId: [GET] api/settings/FSCList/OpeId</li>
+    </ul>
+    <h3>Client Profile</h3>
+    <ul>
+        <li>
+            GetAll : [GET] api/Settings/ClientProfile
+        </li>    
+        <li>
+            GetById: [GET] api/Settings/ClientProfile/Id
+        </li>
+        <li>
+            AddNew : [POST] api/Settings/ClientProfile
+        </li>
+        <li>
+            EditById:[PUT] api/Settings/ClientProfile/Id
+        </li>
+        <li>
+            DelById: [DELETE] api/Settings/ClientProfile/Id
+        </li>
+    </ul>
+</body>
+</html>

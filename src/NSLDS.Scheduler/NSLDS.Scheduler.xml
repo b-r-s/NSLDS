@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NSLDS.Scheduler</name>
+    </assembly>
+    <members>
+        <member name="T:NSLDS.Scheduler.FahDef">
+            <summary>
+            All financial aid history calculations
+            </summary>
+        </member>
+        <member name="T:NSLDS.Scheduler.Controllers.SecurityController">
+            <summary>
+            A uiltity controller with few non-secured endpoints.
+            </summary>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.SecurityController.ValidateTenantCode(System.String)">
+            <summary>
+            Validate tenant code. Primarily used for registration and login process.
+            </summary>
+            <param name="tenantCode"></param>
+            <returns>200 - Ok. Also returns object with "TenantId" string property. To be passed during registration and login.</returns>
+            <returns>404 - Not found</returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.SecurityController.ValidateAccessToken(System.String)">
+            <summary>
+            Validate access token against IdentityServer AccessTokenValidation endpoint.
+            </summary>
+            <param name="accessToken"></param>
+            <returns>200 - Valid</returns>
+            <returns>400 - Bad Request</returns>
+        </member>
+        <member name="T:NSLDS.Scheduler.Controllers.AdminController">
+            <summary>
+            Admin Controller
+            </summary>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.AdminController.Index">
+            <summary>
+            Checks databases
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.AdminController.FSCList">
+            <summary>
+            List of Federal School Codes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.AdminController.DbMigrate">
+            <summary>
+            Apply database migrations
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.AdminController.fsclistupload">
+            <summary>
+            Form for uploading. TEST ONLY
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.AdminController.fsclistupload(Microsoft.AspNet.Http.IFormFile)">
+            <summary>
+            Upload Federal Student Codes from XLS file received from Department of Education
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.GetClientRequests(System.Nullable{System.Int32},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            Get all batch requests for current client with optional parameters
+            </summary>
+            <param name="batchid"></param>
+            <param name="startdate"></param>
+            <param name="enddate"></param>
+            <param name="isdeleted"></param>
+            <param name="issubmitted"></param>
+            <param name="isfailed"></param>
+            <param name="isvalid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.GetNsldsRequestsById(System.Int32)">
+            <summary>
+            Get nslds records by batch "id"
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.PutClientRequest(System.Int32,NSLDS.Domain.ClientRequest)">
+            <summary>
+            Save modified batch record
+            </summary>
+            <param name="id"></param>
+            <param name="clientRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.GetNsldsStudentById(System.Int32)">
+            <summary>
+            Get single nslds record by "id"
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.PutNsldsRequest(System.Int32,NSLDS.Domain.ClientRequestStudent)">
+            <summary>
+            Save modified nslds record
+            </summary>
+            <param name="id"></param>
+            <param name="nsldsRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.PostNsldsRequest(System.Collections.Generic.IEnumerable{NSLDS.Domain.ClientRequestStudent},System.Int32)">
+            <summary>
+            Save new NSLDS student requests with optional batchId parameter
+            </summary>
+            <param name="Students"></param>
+            <param name="batchId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.Upload(System.Collections.Generic.IEnumerable{Microsoft.AspNet.Http.IFormFile},NSLDS.Scheduler.FileImportProcessor)">
+            <summary>
+            Upload and process Excel files containing new NSLDS requests
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.QueueNsldsBatchById(System.Int32)">
+            <summary>
+            Generate the nslds batch TDClient inform file by batchId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.ViewNsldsQueue">
+            <summary>
+            View the job queue pending
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.ExportBatchRequest(System.Int32,NSLDS.Scheduler.FileExportProcessor)">
+            <summary>
+            Export a batch request to Excel spreadsheet
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.PurgeBatchRequest(System.Int32,NSLDS.Scheduler.FileExportProcessor)">
+            <summary>
+            Purge and export a batch invalid students to Excel spreadsheet
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.Upload">
+            <summary>
+            Form for uploading. TEST ONLY
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.ThrowException">
+            <summary>
+            Simulate an exception (Test)
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.TestAckResponseProcessor">
+            <summary>
+            Process Acknowledgement file TRNINFOP.dat (Test)
+            </summary>
+            <returns></returns>
+            GET: api/Requests/AckResponse
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientRequestController.TestFahResponseProcessor">
+            <summary>
+            Process FAH file (Test)
+            </summary>
+            <returns></returns>
+            GET: api/Requests/FahResponse
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientResponseController.GetNsldsResponseById(System.Int32)">
+            <summary>
+            Get nslds FAH summary record by studentId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientResponseController.GetNsldsResponseDetailById(System.Int32)">
+            <summary>
+            Get nslds FAH detail record by studentId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientProfileController.GetClientProfile">
+            <summary>
+            Retrieve current user's Client profile
+            </summary>
+            <returns>ClientProfileResult</returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientProfileController.GetClientProfileById(System.Int32)">
+            <summary>
+            Get profile of client by "id"
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientProfileController.PostClientProfile(NSLDS.Domain.ClientProfile)">
+            <summary>
+            Save new client profile
+            </summary>
+            <param name="clientProfile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientProfileController.PutClientProfile(System.Int32,NSLDS.Domain.ClientProfile)">
+            <summary>
+            Save modified client profile
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.ClientProfileController.DeleteClientProfile(System.Int32)">
+            <summary>
+            Delete client profile by "id"
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.FederalSChoolCodesController.GetFedSchoolCodeList(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Retrieve list of Federal School Codes
+            </summary>
+            <returns>FederalStudentCodesResult</returns>
+        </member>
+        <member name="M:NSLDS.Scheduler.Controllers.FederalSChoolCodesController.GetFedSchoolCodeList(System.String)">
+            <summary>
+            Retrieve list of Federal School Codes by "opeid"
+            </summary>
+            <param name="opeid"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

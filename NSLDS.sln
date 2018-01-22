@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{18A23F42-5167-459F-B037-EDC883868F90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62F76C8A-3D78-45F3-A7AB-DC9A31E75E0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Global.Domain", "src\Global.Domain\Global.Domain.csproj", "{3942A0FC-C041-4D85-AF50-692504D018FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSLDS.Domain", "src\NSLDS.Domain\NSLDS.Domain.csproj", "{CF9C2D75-F09A-4B71-96C1-FE1C5BCCF92C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSLDS.Common", "src\NSLDS.Common\NSLDS.Common.csproj", "{44EB5343-8276-41DC-936C-C870AD7AC14D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSLDS.API", "src\NSLDS.API\NSLDS.API.csproj", "{3ACCA3C6-4744-41B8-B5C9-4C3DA087C3B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSLDS.Scheduler", "src\NSLDS.Scheduler\NSLDS.Scheduler.csproj", "{F442B2DF-28D3-4D2D-A316-F652DA523C9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSLDS.API.Tests", "NSLDS.API.Tests\NSLDS.API.Tests.csproj", "{0EB9A567-42BE-4C7F-B399-780B6A7CD19A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AzureWebSites|Any CPU = AzureWebSites|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3942A0FC-C041-4D85-AF50-692504D018FA}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{3942A0FC-C041-4D85-AF50-692504D018FA}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{3942A0FC-C041-4D85-AF50-692504D018FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3942A0FC-C041-4D85-AF50-692504D018FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3942A0FC-C041-4D85-AF50-692504D018FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3942A0FC-C041-4D85-AF50-692504D018FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9C2D75-F09A-4B71-96C1-FE1C5BCCF92C}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9C2D75-F09A-4B71-96C1-FE1C5BCCF92C}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{CF9C2D75-F09A-4B71-96C1-FE1C5BCCF92C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9C2D75-F09A-4B71-96C1-FE1C5BCCF92C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9C2D75-F09A-4B71-96C1-FE1C5BCCF92C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9C2D75-F09A-4B71-96C1-FE1C5BCCF92C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44EB5343-8276-41DC-936C-C870AD7AC14D}.AzureWebSites|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EB5343-8276-41DC-936C-C870AD7AC14D}.AzureWebSites|Any CPU.Build.0 = Debug|Any CPU
+		{44EB5343-8276-41DC-936C-C870AD7AC14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EB5343-8276-41DC-936C-C870AD7AC14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44EB5343-8276-41DC-936C-C870AD7AC14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44EB5343-8276-41DC-936C-C870AD7AC14D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ACCA3C6-4744-41B8-B5C9-4C3DA087C3B8}.AzureWebSites|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACCA3C6-4744-41B8-B5C9-4C3DA087C3B8}.AzureWebSites|Any CPU.Build.0 = Debug|Any CPU
+		{3ACCA3C6-4744-41B8-B5C9-4C3DA087C3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACCA3C6-4744-41B8-B5C9-4C3DA087C3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ACCA3C6-4744-41B8-B5C9-4C3DA087C3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ACCA3C6-4744-41B8-B5C9-4C3DA087C3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F442B2DF-28D3-4D2D-A316-F652DA523C9B}.AzureWebSites|Any CPU.ActiveCfg = Debug|Any CPU
+		{F442B2DF-28D3-4D2D-A316-F652DA523C9B}.AzureWebSites|Any CPU.Build.0 = Debug|Any CPU
+		{F442B2DF-28D3-4D2D-A316-F652DA523C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F442B2DF-28D3-4D2D-A316-F652DA523C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F442B2DF-28D3-4D2D-A316-F652DA523C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F442B2DF-28D3-4D2D-A316-F652DA523C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EB9A567-42BE-4C7F-B399-780B6A7CD19A}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB9A567-42BE-4C7F-B399-780B6A7CD19A}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{0EB9A567-42BE-4C7F-B399-780B6A7CD19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB9A567-42BE-4C7F-B399-780B6A7CD19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB9A567-42BE-4C7F-B399-780B6A7CD19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB9A567-42BE-4C7F-B399-780B6A7CD19A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3942A0FC-C041-4D85-AF50-692504D018FA} = {18A23F42-5167-459F-B037-EDC883868F90}
+		{CF9C2D75-F09A-4B71-96C1-FE1C5BCCF92C} = {18A23F42-5167-459F-B037-EDC883868F90}
+		{44EB5343-8276-41DC-936C-C870AD7AC14D} = {18A23F42-5167-459F-B037-EDC883868F90}
+		{3ACCA3C6-4744-41B8-B5C9-4C3DA087C3B8} = {18A23F42-5167-459F-B037-EDC883868F90}
+		{F442B2DF-28D3-4D2D-A316-F652DA523C9B} = {18A23F42-5167-459F-B037-EDC883868F90}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {637E25C1-C603-488F-AA5A-E613F3992339}
+	EndGlobalSection
+EndGlobal

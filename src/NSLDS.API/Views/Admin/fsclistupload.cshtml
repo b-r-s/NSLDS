@@ -1,0 +1,27 @@
+@model Global.Domain.FedSchoolCodeList
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>fsclistupload</title>
+</head>
+<body>
+
+<div>
+    <h4>FedSchoolCodeList Upload</h4>
+    <hr />
+    <form method="post" asp-action="uploadFederalStudentCodes" asp-controller="api/admin" enctype="multipart/form-data">
+        <p>
+            <input type="file" name="file" />
+            <input type="submit" value="Upload" />
+        </p>
+</form>
+    </div>
+</body>
+</html>

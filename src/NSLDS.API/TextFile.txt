@@ -1,0 +1,7 @@
+﻿ow to create the 'client' db, 
+open a cmd prompt in the nslds.domain project folder and use "dotnet ef database update". 
+But first uncomment the connection string (update it to point to your local sql) 
+in nslds_context.cs
+=> Type 'get-help NuGet' to see all available NuGet commands.
+
+Could not load file or assembly 'Microsoft.AspNetCore.Hosting.Abstractions, Version=1.1.1.0
